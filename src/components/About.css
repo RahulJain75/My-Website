@@ -1,0 +1,131 @@
+.about-timeline {
+  padding: 60px 20px;
+  background-size: cover;
+  font-family: 'Segoe UI', sans-serif;
+  color: #ffffff;
+  min-height: 100vh;
+}
+
+.about-title {
+  text-align: center;
+  font-size: 40px;
+  margin-bottom: 60px;
+  color: #00ffe7;
+}
+
+.timeline {
+  position: relative;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.timeline::after {
+  content: '';
+  position: absolute;
+  width: 4px;
+  background: #00ffe7;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  margin-left: -2px;
+}
+
+.timeline-item {
+  padding: 20px 40px;
+  position: relative;
+  width: 50%;
+  box-sizing: border-box;
+}
+
+.timeline-item.left {
+  left: 0;
+}
+
+.timeline-item.right {
+  left: 50%;
+}
+
+.timeline-item .content {
+  background: rgba(31, 31, 31, 0.95);
+  padding: 20px 25px;
+  border-radius: 10px;
+  position: relative;
+  box-shadow: 0 0 10px #00ffe755;
+  transition: transform 0.3s;
+}
+
+.timeline-item .content:hover {
+  transform: translateY(-5px);
+}
+
+.timeline-item.left .content {
+  margin-left: auto;
+  border-left: 4px solid #00ffe7;
+}
+
+.timeline-item.right .content {
+  border-right: 4px solid #00ffe7;
+}
+
+.timeline-item h3 {
+  margin-top: 0;
+  font-size: 24px;
+  color: #00ffe7;
+}
+
+.timeline-item p {
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+/* Circles */
+.timeline-item::before {
+  content: "";
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  background-color: #00ffe7;
+  border-radius: 50%;
+  top: 25px;
+  z-index: 1;
+}
+
+.timeline-item.left::before {
+  right: -8px;
+}
+
+.timeline-item.right::before {
+  left: -8px;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .timeline::after {
+    left: 20px;
+  }
+
+  .timeline-item {
+    width: 100%;
+    padding-left: 40px;
+    padding-right: 25px;
+    margin-bottom: 30px;
+  }
+
+  .timeline-item.right {
+    left: 0%;
+  }
+
+  .timeline-item.left {
+    left: 0%;
+  }
+
+  .timeline-item::before {
+    left: 4px;
+  }
+
+  .timeline-item .content {
+    border-radius: 10px;
+    margin-left: 0;
+  }
+}
+

@@ -1,0 +1,64 @@
+.footer {
+  background-color: black;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  font-size: 14px;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  z-index: 1000;
+  overflow: hidden;
+}
+
+.footer-left {
+  flex: none;
+  text-align: left;
+  padding-left: 20px;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* 🔴 Fixed "Legal Notice" in red */
+.legal-notice {
+  color: red;
+  font-weight: bold;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+/* Scrolling container (hides overflow) */
+.footer-right {
+  flex: 1;
+  overflow: hidden;
+  white-space: nowrap;
+  position: relative;
+  display: flex;
+}
+
+/* Wrap the text twice for a seamless infinite loop */
+.scrolling-wrapper {
+  display: flex;
+  width: max-content;
+  animation: scrollText 30s linear infinite;
+}
+
+.scrolling-text {
+  white-space: nowrap;
+  padding-right: 100px; /* Space to prevent text overlap */
+  font-size: 14px;
+}
+
+/* 🔄 Perfect Infinite Scroll (No Gaps, No Delay) */
+@keyframes scrollText {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}

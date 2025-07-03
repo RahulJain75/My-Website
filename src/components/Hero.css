@@ -1,0 +1,90 @@
+.hero {
+  position: relative;
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+  padding: 20px;
+  overflow: hidden;
+}
+
+/* Video Background */
+.video-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.5;
+  z-index: -2;
+}
+
+/* Dark Overlay */
+.video-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: -1;
+}
+
+/* Content Styling */
+.hero-content {
+  position: relative;
+  z-index: 1;
+  max-width: 800px;
+  padding: 20px;
+}
+
+/* "Keen and Able" - More Bright and Eye-Catching */
+.hero h1 {
+  font-size: 4rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  color: #ffffff;
+  text-shadow: 0 0 20px rgba(255, 255, 255, 0.8);
+  opacity: 0;
+  transform: translateY(-30px);
+  animation: slideIn 1s ease-out forwards 0.3s;
+}
+
+/* "Doing Business the Open Way" - Animated Entrance */
+.hero h2 {
+  font-size: 2.5rem;
+  font-weight: 500;
+  margin-bottom: 15px;
+  color: #f8d210;
+  opacity: 0;
+  transform: translateY(-20px);
+  animation: fadeIn 1.5s ease-out forwards 0.5s;
+}
+
+/* Keyframes */
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
