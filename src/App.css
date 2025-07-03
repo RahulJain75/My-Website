@@ -1,38 +1,52 @@
-.App {
+/* General styles for the entire app */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: sans-serif;
+  background-color: #121212;
+  color: white;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
+/* Wrapper to center and manage layout */
+.app {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  justify-content: space-between;
 }
 
-.App-link {
-  color: #61dafb;
+/* Main content area to avoid footer overlap */
+.main-content {
+  flex: 1;
+  padding-top: 80px ; /* Adjust if Navbar is fixed */
+  
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
+/* Utility class for buttons */
+.btn {
+  background-color: yellow;
+  color: black;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  border-radius: 25px;
+  transition: 0.3s ease-in-out;
+}
+
+.btn:hover {
+  background-color: #ffcc00;
+}
+
+/* Responsive utility */
+@media (max-width: 768px) {
+  .main-content {
+    padding-top: 60px;
   }
 }
